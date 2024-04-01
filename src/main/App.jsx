@@ -1,20 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
-
-import React from 'react'
 import './App.css'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import Logo from "../components/templates/Logo";
-import Main from "../components/templates/Main";
-import Nav from '../components/templates/Nav';
-import Footer from '../components/templates/Footer';
+import Logo from '../components/templates/Logo'
+import Nav from '../components/templates/Nav'
+import Routes from './Routes'
+import Footer from '../components/templates/Footer'
 
-
-export default prosp =>
-    <div className="app">
-        <Logo />
-        <Nav />
-        <Main icon="home" title="Inicio"
-            subtitle="Segundo Projeto do capitulo de React." />
-        <Footer />
-    </div>
+export default props =>
+    <BrowserRouter>
+        <div className="app">
+            <Logo />
+            <Nav />
+            <Routes />
+            <Footer />
+        </div>
+    </BrowserRouter>
